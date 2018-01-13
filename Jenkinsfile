@@ -2,7 +2,7 @@ pipeline {
     agent {
        docker {
           image 'maven:3-alpine'
-          args  '-v ./build:build'
+          args  '-v ~/build:~/build -v ~/.m3 ~/.m3'
        }
     }
     environment {
