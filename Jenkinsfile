@@ -11,14 +11,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-               echo 'Build phase'
-               sleep 5
+               sh 'echo Build phase'
+               sh 'sleep 5'
             }
         }
         stage('Test') {
             steps {
-                echo 'Test phase'
-                sleep 5
+                sh 'echo Test phase'
+                sh 'sleep 5'
             }
         }
         stage('Deliver for development') {
@@ -26,8 +26,8 @@ pipeline {
                 branch 'development'
             }
             steps {
-               echo 'Delivers on development environment'
-               sleep 5
+               sh 'echo Delivers on development environment'
+               sh 'sleep 5'
             }
         }
         stage('Deploy for production') {
@@ -35,8 +35,8 @@ pipeline {
                 branch 'production'
             }
             steps {
-               echo 'Delivers on production environment'
-               sleep 5
+               sh 'echo Delivers on production environment'
+               sh 'sleep 5'
             }
         }
     }
